@@ -1,0 +1,6 @@
+name: "Joe's Portfolio"
+description: "I'm Joe, and this is my description."
+
+url: "http://localhost:4000"
+
+paginate: 10
