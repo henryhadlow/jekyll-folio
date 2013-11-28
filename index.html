@@ -1,0 +1,12 @@
+---
+title: Home
+layout: default
+---
+
+<div class="posts">
+    {% for post in site.posts limit: site.paginate %}
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h4>{{ post.date | date_to_long_string }}</h4>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+</div>
