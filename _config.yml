@@ -1,5 +1,4 @@
-name: "Henry is a designer / This is his portfolio"
-description: "I’m Henry Hadlow, a designer interested in digital services and beautiful typography. I work at GOV.UK. When I'm not designing I like to play the accordion. Here are some things I've worked on recently."
+name: "Henry Hadlow"
 
 url: "http://localhost:4000"
 permalink: /:categories/:title
