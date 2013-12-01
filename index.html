@@ -3,6 +3,9 @@ title: Home
 layout: default
 ---
 
+{% include about.html %}
+Here are some things I&apos;ve worked on recently.
+
 <div class="posts">
     {% for post in site.categories.work %}
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
