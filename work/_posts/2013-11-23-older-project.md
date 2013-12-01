@@ -1,7 +1,7 @@
 ---
-title: Project 1
+title: Older project
 layout: default
-featured-image: /static/img/work/test-post-1/01.gif
+featured-image: /static/img/work/older-project/01.gif
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum leo non felis porttitor vulputate. Nulla ipsum quam, auctor ut hendrerit quis, tincidunt eu metus. Quisque ipsum tellus, semper a tempus quis, interdum vel magna. Cras a nisl diam, in accumsan augue. Pellentesque varius nibh eu diam tempor rhoncus.
