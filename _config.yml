@@ -5,6 +5,8 @@ permalink: /:categories/:title
 
 paginate: 10
 
+encoding: UTF8-MAC
+
 assets:
     dirname: static
     baseurl: /static/
