@@ -3,12 +3,30 @@ title: Home
 layout: default
 ---
 
+<nav id="primary-nav">
+    <ul>
+        <li id="nav-work">
+            <a href="#work" title="The work">Work</a>
+        </li>
+        <li id="nav-about">
+            <a href="#about" title="About Henry">About</a>
+        </li>
+        <li id="nav-contact">
+            <a href="#contact" title="Contact Henry">Contact</a>
+        </li>
+    </ul>
+</nav>
+
 <h1>Henry is a designer / This is his portfolio</h1>
 
+<p>
 {% include about.html %}
 Here are some things I&apos;ve worked on recently.
+</p>
 
-<a href="mailto:henry@manofscience.co.uk">henry@manofscience.co.uk</a> &bull; <a href="{{ site.url }}/cv-henry-hadlow.pdf" target="_blank">Download CV</a>
+<p>
+    <a href="mailto:henry@manofscience.co.uk">henry@manofscience.co.uk</a> &bull; <a href="{{ site.url }}/cv-henry-hadlow.pdf" target="_blank">Download CV</a>
+</p>
 
 <div class="posts">
     {% for post in site.categories.work %}
