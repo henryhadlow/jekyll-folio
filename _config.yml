@@ -4,3 +4,10 @@ url: "http://localhost:4000"
 permalink: /:categories/:title
 
 paginate: 10
+
+assets:
+    dirname: static
+    baseurl: /static/
+    sources:
+        - static/_css
+        - static/_js
