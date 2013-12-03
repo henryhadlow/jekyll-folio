@@ -30,11 +30,9 @@ Here are some things I&apos;ve worked on recently.
 
 <div class="posts">
     {% for post in site.categories.work %}
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <h4>{{ post.date | date_to_long_string }}</h4>
-    
-        {% if post.featured-image %}
-            <img src="{{ site.url }}/{{ post.featured-image }}" class="img-responsive" />
-        {% endif %}
+    <div id="{{ post.slug }}" {% if post.background-color %}style="background-color: #{{ post.background-color }}"{% endif %}>
+        <h2><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h2>
+        {% if post.featured-image %}<img src="{{ site.url }}/{{ post.featured-image }}" />{% endif %}
+    </div>
     {% endfor %}
 </div>
