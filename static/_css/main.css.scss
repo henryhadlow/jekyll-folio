@@ -11,7 +11,8 @@ $turquoise: #3acdb2;
 $blue: #009bdb;
 $purple: #43047c;
 
-@import "normalize";
+@import "bootstrap/normalize";
+@import "mixins";
 //@import "print";
 
 @font-face {
@@ -25,7 +26,152 @@ $purple: #43047c;
     font-style: normal;
 }
 
-html, body {
-  background: $lightgrey;
-  font-face: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
+/* --- Generic styles --- */
+
+html {
+  font-size: 62.5%;
+  body {
+    background: $lightgrey;
+    // overflow-x: hidden;
+    // max-width: 100%;
+  }
 }
+
+body {
+  font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
+  // margin: 0;
+  // padding: 0;
+  font-size: 200%;
+  line-height: 1.5;
+
+  header {
+    background: white;
+    color: $purple;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px; padding: 2rem;
+  }
+}
+
+/* --- Link styles --- */
+
+a {
+  color: inherit;
+  border-bottom: 4px solid; border-bottom: 0.4rem solid;
+  display: inline;
+  text-decoration: none;
+  -moz-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  -ms-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+a:hover {
+  color: $blue;
+}
+a:active {
+  color: $purple;
+}
+@media (max-width: 550px) {
+  a {
+    border-bottom: 2px solid; border-bottom: 0.2rem solid;
+  }
+}
+
+a.stealth-link {
+  border-bottom: dotted;
+}
+a.no-link {
+  border-bottom: 0;
+}
+a.no-link:hover {
+  border-bottom: 4px solid; border-bottom: 0.4rem solid;
+  color: inherit;
+}
+
+/* --- Button styles --- */
+
+a.button {
+  border: 0;
+  @include rem(margin, 10px 0);
+  @include rem(padding, 0.5rem 0.8rem);
+  
+  @include border-radius(3px);
+  -webkit-box-shadow: 0 3px 0 lighten($black, 15%);
+  -moz-box-shadow: 0 3px 0 lighten($black, 15%);
+  box-shadow: 0 3px 0 lighten($black, 15%);
+  -moz-transition: background-color 0.1s ease-in-out;
+  -ms-transition: background-color 0.1s ease-in-out;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+}
+.button:active {
+  top: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.button.right {
+  float: right;
+  display: block;
+}
+@media (max-width: 768px) {
+  .button.right {
+    clear: left;
+    float: left;
+    margin: 0 0 15px 0; margin: 0 0 1.5rem 0;
+  }
+}
+
+.button.UC {
+  font-size: 18px; font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button.light {
+  background-color: darken($white, 10%);
+  color: lighten($black, 10%);
+}
+.button.light:hover {
+  background-color: #FFF;
+  color: darken($grey, 10%)
+}
+.button.bright {
+  background-color: darken($white, 5%);
+  color: $grey;
+}
+.button.bright:hover {
+  background-color: #FFF;
+  color: darken($grey, 10%)
+}
+
+.button.dark {
+  background-color: lighten($black, 30%);
+  color: $white;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0 3px 0 $black;
+  -moz-box-shadow: 0 3px 0 $black;
+  box-shadow: 0 3px 0 $black;
+}
+.button.dark:hover {
+  background-color: $black;
+}
+.button.dark:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* --- Homepage styles --- */
+
+#splash {
+  color: $turquoise;
+  font-size: 130px; font-size: 13rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 60px 0 50px; padding: 6rem 0 5rem;
+  text-align: center;
+}
+
+
