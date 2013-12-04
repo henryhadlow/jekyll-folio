@@ -13,6 +13,7 @@ $purple: #43047c;
 
 @import "bootstrap/normalize";
 @import "mixins";
+@import "homepage";
 //@import "print";
 
 @font-face {
@@ -53,6 +54,34 @@ body {
   }
 }
 
+.contained {
+  padding-left: 15px; padding-left: 1.5rem;
+  padding-right: 15px; padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  display: block;
+}
+@media (min-width: 1200px) {
+  .contained {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) {
+  .contained {
+    width: 970px;
+  }
+}
+@media (min-width: 768px) {
+  .contained {
+    width: 750px;
+  }
+}
+// img.contained {
+//   padding-left: 0;
+//   padding-right: 0;
+// }
+
 /* --- Link styles --- */
 
 a {
@@ -92,9 +121,8 @@ a.no-link:hover {
 
 a.button {
   border: 0;
-  @include rem(margin, 10px 0);
-  @include rem(padding, 0.5rem 0.8rem);
-  
+  margin: 10px 0; margin: 1rem 0;
+  padding: 0.5rem 0.8rem;
   @include border-radius(3px);
   -webkit-box-shadow: 0 3px 0 lighten($black, 15%);
   -moz-box-shadow: 0 3px 0 lighten($black, 15%);
@@ -161,17 +189,3 @@ a.button {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-
-/* --- Homepage styles --- */
-
-#splash {
-  color: $turquoise;
-  font-size: 130px; font-size: 13rem;
-  line-height: 1.1;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 60px 0 50px; padding: 6rem 0 5rem;
-  text-align: center;
-}
-
-
