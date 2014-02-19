@@ -14,6 +14,7 @@ $purple: #43047c;
 @import "bootstrap/normalize";
 @import "mixins";
 @import "homepage";
+@import "links+buttons";
 //@import "print";
 
 @font-face {
@@ -62,9 +63,9 @@ body {
   max-width: 100%;
   display: block;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .contained {
-    width: 1170px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
@@ -72,120 +73,12 @@ body {
     width: 970px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .contained {
-    width: 750px;
+    width: 1170px;
   }
 }
 // img.contained {
 //   padding-left: 0;
 //   padding-right: 0;
 // }
-
-/* --- Link styles --- */
-
-a {
-  color: inherit;
-  border-bottom: 4px solid; border-bottom: 0.4rem solid;
-  display: inline;
-  text-decoration: none;
-  -moz-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  -ms-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-}
-a:hover {
-  color: $blue;
-}
-a:active {
-  color: $purple;
-}
-@media (max-width: 550px) {
-  a {
-    border-bottom: 2px solid; border-bottom: 0.2rem solid;
-  }
-}
-
-a.stealth-link {
-  border-bottom: dotted;
-}
-a.no-link {
-  border-bottom: 0;
-}
-a.no-link:hover {
-  border-bottom: 4px solid; border-bottom: 0.4rem solid;
-  color: inherit;
-}
-
-/* --- Button styles --- */
-
-a.button {
-  border: 0;
-  margin: 10px 0; margin: 1rem 0;
-  padding: 0.5rem 0.8rem;
-  @include border-radius(3px);
-  -webkit-box-shadow: 0 3px 0 lighten($black, 15%);
-  -moz-box-shadow: 0 3px 0 lighten($black, 15%);
-  box-shadow: 0 3px 0 lighten($black, 15%);
-  -moz-transition: background-color 0.1s ease-in-out;
-  -ms-transition: background-color 0.1s ease-in-out;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
-}
-.button:active {
-  top: 0px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.button.right {
-  float: right;
-  display: block;
-}
-@media (max-width: 768px) {
-  .button.right {
-    clear: left;
-    float: left;
-    margin: 0 0 15px 0; margin: 0 0 1.5rem 0;
-  }
-}
-
-.button.UC {
-  font-size: 18px; font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.button.light {
-  background-color: darken($white, 10%);
-  color: lighten($black, 10%);
-}
-.button.light:hover {
-  background-color: #FFF;
-  color: darken($grey, 10%)
-}
-.button.bright {
-  background-color: darken($white, 5%);
-  color: $grey;
-}
-.button.bright:hover {
-  background-color: #FFF;
-  color: darken($grey, 10%)
-}
-
-.button.dark {
-  background-color: lighten($black, 30%);
-  color: $white;
-  letter-spacing: 1px;
-  -webkit-box-shadow: 0 3px 0 $black;
-  -moz-box-shadow: 0 3px 0 $black;
-  box-shadow: 0 3px 0 $black;
-}
-.button.dark:hover {
-  background-color: $black;
-}
-.button.dark:active {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
