@@ -30,11 +30,11 @@ layout: home
             </p>
         </section>
 
-        <div id="work">
+        <section id="work">
             {% for post in site.categories.work %}
-            <div id="{{ post.id }}" class="project" {% if post.background-color %}style="background-color: #{{ post.background-color }}"{% endif %}>
+            <article id="{{ post.id }}" class="project" {% if post.background-color %}style="background-color: #{{ post.background-color }}"{% endif %}>
                 <h2 class="contained{% if post.background-color %} reversed"{% endif %}"><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h2>
                 {% if post.featured-image %}<img src="{{ site.url }}/{{ post.featured-image }}" class="contained" />{% endif %}
-            </div>
+            </article>
             {% endfor %}
-        </div>
+        </section>
