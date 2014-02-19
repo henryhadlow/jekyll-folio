@@ -1,7 +1,15 @@
-name: "Joe's Portfolio"
-description: "I'm Joe, and this is my description."
+name: "Henry Hadlow"
 
 url: "http://localhost:4000"
 permalink: /:categories/:title
 
 paginate: 10
+
+encoding: UTF8-MAC
+
+assets:
+    dirname: static
+    baseurl: /static/
+    sources:
+        - static/_css
+        - static/_js
