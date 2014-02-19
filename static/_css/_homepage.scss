@@ -1,3 +1,84 @@
+#primary-nav {
+  position: relative;
+  z-index: 5;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      a {
+        display: block;
+        background: $purple;
+        color: $white;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px; padding: 1.5rem;
+        line-height: 0.9;
+        letter-spacing: 1px;
+        -moz-transition: background-color 0.1s;
+        -ms-transition: background-color 0.1s;
+        -webkit-transition: background-color 0.1s;
+        transition: background-color 0.1s;
+      }
+      a:hover, a:active {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #primary-nav {
+    z-index: auto;
+    
+    ul {
+
+      li {
+        margin: 0;
+        position: absolute;
+        z-index: 10;
+        display: inline-block;
+        text-align: left;
+
+        a {
+          background: transparent;
+          color: $purple;
+          padding: 0;
+          font-size: 40px; font-size: 4rem;
+          border-bottom: 7px solid; border-bottom: 0.7rem solid;
+          font-weight: 600;
+          line-height: normal;
+          -moz-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+          -ms-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+          -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+          transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+        }
+        a:hover, a:active {
+          background-color: transparent;
+        }
+      }
+      li:hover > a {
+        color: $blue;
+      }
+    }
+  }
+  #nav-work {
+    top: 18.5rem;
+    right: 35%; }
+  #nav-about {
+    top: 29.5rem;
+    left: 30%; }
+  #nav-contact {
+    top: 43rem;
+    right: 30%; }
+}
+
 #splash {
   color: $turquoise;
   font-size: 130px; font-size: 13rem;
