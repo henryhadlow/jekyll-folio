@@ -5,10 +5,7 @@ a {
   border-bottom: 4px solid; border-bottom: 0.4rem solid;
   display: inline;
   text-decoration: none;
-  -moz-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  -ms-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  @include transition((color 0.1s ease-in-out, border-color 0.1s ease-in-out));
 }
 a:hover {
   color: $blue;
