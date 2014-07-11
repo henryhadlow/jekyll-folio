@@ -17,24 +17,28 @@ layout: home
             </ul>
         </nav>
 
-        <h1 id="splash" class="contained">Henry is&nbsp;a<br />designer<br />/<br />This is&nbsp;his<br />portfolio</h1>
+        <h1 id="splash" class="wrapper">Henry is&nbsp;a<br />designer<br />/<br />This is&nbsp;his<br />portfolio</h1>
 
         <section id="about">
-            <p id="intro" class="contained">
-            {% include about.html %}
-            Here are some things I&apos;ve worked on recently.
-            </p>
+            <div class="wrapper">
+                <p id="intro" class="contained">
+                {% include about.html %}
+                Here are some things I&apos;ve worked on recently.
+                </p>
 
-            <p id="contact" class="contained">
-                <a href="mailto:henry@manofscience.co.uk">henry@manofscience.co.uk</a> &bull; <a href="{{ site.url }}/cv-henry-hadlow.pdf" target="_blank">Download CV</a>
-            </p>
+                <p id="contact" class="contained">
+                    <a href="mailto:henry@manofscience.co.uk">henry@manofscience.co.uk</a> &bull; <a href="{{ site.url }}/cv-henry-hadlow.pdf" target="_blank">Download CV</a>
+                </p>
+            </div>
         </section>
 
         <section id="work">
             {% for post in site.categories.work %}
             <article id="{{ post.id }}" class="project" {% if post.background-color %}style="background-color: #{{ post.background-color }}"{% endif %}>
-                <h2 class="contained{% if post.background-color %} reversed"{% endif %}"><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h2>
-                {% if post.featured-image %}<img src="{{ site.url }}/{{ post.featured-image }}" class="contained" />{% endif %}
+                <div class="wrapper">
+                    <h2{% if post.background-color %} class="reversed"{% endif %}><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%Y" }}</span> {{ post.title }}</a></h2>
+                    {% if post.featured-image %}<img src="{{ site.url }}/{{ post.featured-image }}" />{% endif %}
+                </div>
             </article>
             {% endfor %}
         </section>

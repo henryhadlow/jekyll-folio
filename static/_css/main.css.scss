@@ -44,30 +44,17 @@ body {
   }
 }
 
-.contained {
-  padding-left: 15px; padding-left: 1.5rem;
-  padding-right: 15px; padding-right: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
+.wrapper {
+  margin: 0 auto;
+  padding: 0 15px; padding: 0 1.5rem;
+  max-width: 960px; max-width: 96rem;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0; padding: 2rem 0;
+}
+
+img {
   max-width: 100%;
-  display: block;
 }
-@media (min-width: 768px) {
-  .contained {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .contained {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .contained {
-    width: 1170px;
-  }
-}
-// img.contained {
-//   padding-left: 0;
-//   padding-right: 0;
-// }

@@ -22,13 +22,13 @@ a:active {
   }
 }
 
-a.stealth-link {
+.stealth-link {
   border-bottom: dotted;
 }
-a.no-link {
+.no-link {
   border-bottom: 0;
 }
-a.no-link:hover {
+.no-link:hover {
   border-bottom: 4px solid; border-bottom: 0.4rem solid;
   color: inherit;
 }
