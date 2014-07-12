@@ -3,43 +3,43 @@
 @import "mixins";
 @import "media-query-helpers";
 @import "typography";
-@import "homepage";
-@import "links+buttons";
 @import "colours";
-//@import "print";
-
-/* --- Generic styles --- */
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 200%;
-  line-height: 1.5;
-  background: $lightgrey;
-
-  header {
-    background: $white;
-    color: $purple;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px; padding: 2rem;
-  }
-}
-
-.wrapper {
-  margin: 0 auto;
-  padding: 0 15px; padding: 0 1.5rem;
-  max-width: 960px; max-width: 96rem;
-}
-
-p {
-  margin: 0;
-  padding: 20px 0; padding: 2rem 0;
-}
-
-img {
-  max-width: 100%;
-}
+@import "links+buttons";
+@import "homepage";
+// @import "print";
+//
+// --- Generic styles ---
+//
+// html {
+//   font-size: 62.5%;
+// }
+//
+// body {
+//   font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
+//   font-size: 200%;
+//   line-height: 1.5;
+//   background: $lightgrey;
+//
+//   header {
+//     background: $white;
+//     color: $purple;
+//     text-transform: uppercase;
+//     text-align: center;
+//     padding: 20px; padding: 2rem;
+//   }
+// }
+//
+// .wrapper {
+//   margin: 0 auto;
+//   padding: 0 15px; padding: 0 1.5rem;
+//   max-width: 960px; max-width: 96rem;
+// }
+//
+// p {
+//   margin: 0;
+//   padding: 20px 0; padding: 2rem 0;
+// }
+//
+// img {
+//   max-width: 100%;
+// }

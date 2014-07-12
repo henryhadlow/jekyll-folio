@@ -111,6 +111,9 @@
   background-color: $white;
 }
 #intro {
+  a {
+    @extend .stealth-link;
+  }
   @media (min-width: 400px) {
     font-size: 2.4rem;
   }

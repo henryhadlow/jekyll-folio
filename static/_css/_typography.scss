@@ -15,8 +15,7 @@
             $font-size-print: 14pt,
             $line-height: (30 / $font-size),
             $line-height-640: (20 / $font-size-640)) {
-  /* ROUND(A2÷4,0)×5 */
-  line-height: $line-height;
+  line-height: $line-height; // ROUND(A2÷4,0)×5
   font-weight: 400;
   text-transform: none;
   @include media(mobile) {
@@ -26,10 +25,5 @@
 }
 
 @mixin core-80($line-height: (80 / 80), $line-height-640: (55 / 53), $tabular-numbers: false) {
-  @include core($font-size: 80px,
-                $font-size-640: 53px,
-                $font-size-print: 28pt,
-                $line-height,
-                $line-height-640,
-                $tabular-numbers: $tabular-numbers);
+  @include core(80px, 53px, 28pt, $line-height, $line-height-640, $tabular-numbers: $tabular-numbers);
 }
