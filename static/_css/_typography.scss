@@ -10,14 +10,17 @@
     font-style: normal;
 }
 
-@mixin font($font-size: 20px,
+@mixin font($font-size: 16px,
             $line-height: floor($font-size/3)*5,
-            $font-size-tablet: $font-size,
+            $font-size-tablet: round($font-size*1.125),
             $line-height-tablet: floor($font-size-tablet/3)*5,
-            $font-size-desktop: $font-size,
+            $font-size-desktop: round($font-size*1.25),
             $line-height-desktop: floor($font-size-desktop/3)*5) {
 
+  font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: $font-size;
   line-height: $line-height/$font-size;
+
   @include media(tablet) {
     font-size: $font-size-tablet;
     line-height: $line-height-tablet/$font-size-tablet;
@@ -28,13 +31,47 @@
   }
 }
 
-body {
-  font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 200%;
-  line-height: 1.5;
+.bold {
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-p {
-  margin: 0;
-  padding: 20px 0;
+body {
+  @include font;
+}
+
+p, ul, ol, h1, h2, h3, h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p, ul, ol {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.intro {
+  @include font(20px, 30px, 24px, 35px, 30px, 45px);
+}
+
+h1 {
+  @include font(30px, 45px, 41px, 60px, 45px, 65px);
+  @extend bold;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+h2 {
+  @include font(24px, 35px, 27px, 40px, 30px, 45px);
+  @extend bold;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+h3, h4, h5, h6 {
+  @include font(16px);
+  @extend bold;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }

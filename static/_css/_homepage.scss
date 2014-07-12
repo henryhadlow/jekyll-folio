@@ -88,7 +88,6 @@
   color: $turquoise;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
   padding: 20px 0;
 
   @include media(tablet) {
@@ -101,29 +100,26 @@
 
 #about {
   background-color: $white;
-}
-#intro {
-  @include font(20px, 30px, 24px, 35px, 30px, 45px);
-  a {
+  padding: 15px 0;
+  .intro a {
     @extend .stealth-link;
   }
-}
-#contact {
-  padding: 0 0 40px 0;
+  #contact {
+    padding: 0 0 25px 0;
+  }
 }
 
 .project {
-	padding: 10px 0;
+	padding: 15px 0;
 
 	h2 {
-		margin: 10px 0;
+		padding: 5px 0;
 
 		.date {
-			font-size: 25px; font-size: 2.5rem;
+      @include font(20px);
 		}
-
 		a {
-			border-bottom: 0;
+			@extend .no-link;
 		}
 	}
 
