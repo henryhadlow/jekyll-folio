@@ -2,21 +2,19 @@
 
 a {
   color: inherit;
-  border-bottom: 4px solid; border-bottom: 0.4rem solid;
+  border-bottom: 2px solid;
   display: inline;
   text-decoration: none;
   @include transition((color 0.1s ease-in-out, border-color 0.1s ease-in-out));
+  @include media(tablet) {
+    border-bottom: 4px solid;
+  }
 }
 a:hover {
   color: $blue;
 }
 a:active {
   color: $purple;
-}
-@media (max-width: 550px) {
-  a {
-    border-bottom: 2px solid; border-bottom: 0.2rem solid;
-  }
 }
 
 .stealth-link {
