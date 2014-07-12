@@ -26,6 +26,15 @@ header {
   a { border-bottom: 0; }
 }
 
+footer p {
+  padding: 15px 0;
+  @include font(13px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $grey;
+  text-align: center;
+}
+
 .wrapper {
   margin: 0 auto;
   padding: 0 15px;
