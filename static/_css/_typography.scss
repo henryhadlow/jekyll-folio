@@ -10,20 +10,31 @@
     font-style: normal;
 }
 
-@mixin core($font-size: 20px,
-            $font-size-640: 16px,
-            $font-size-print: 14pt,
-            $line-height: (30 / $font-size),
-            $line-height-640: (20 / $font-size-640)) {
-  line-height: $line-height; // ROUND(A2÷4,0)×5
-  font-weight: 400;
-  text-transform: none;
-  @include media(mobile) {
-    font-size: $font-size-640;
-    line-height: $line-height-640;
+@mixin font($font-size: 20px,
+            $line-height: floor($font-size/3)*5,
+            $font-size-tablet: $font-size,
+            $line-height-tablet: floor($font-size-tablet/3)*5,
+            $font-size-desktop: $font-size,
+            $line-height-desktop: floor($font-size-desktop/3)*5) {
+
+  line-height: $line-height/$font-size;
+  @include media(tablet) {
+    font-size: $font-size-tablet;
+    line-height: $line-height-tablet/$font-size-tablet;
+  }
+  @include media(desktop) {
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop/$font-size-desktop;
   }
 }
 
-@mixin core-80($line-height: (80 / 80), $line-height-640: (55 / 53), $tabular-numbers: false) {
-  @include core(80px, 53px, 28pt, $line-height, $line-height-640, $tabular-numbers: $tabular-numbers);
+body {
+  font-family: edmondsansmedium, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 200%;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0;
 }

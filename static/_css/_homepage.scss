@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@include media(desktop) {
   #primary-nav {
     z-index: auto;
 
@@ -69,41 +69,33 @@
   }
   #nav-work {
     top: 18.5rem;
-    right: 35%; }
+    right: 35%;
+  }
   #nav-about {
     top: 29.5rem;
-    left: 30%; }
+    left: 30%;
+  }
   #nav-contact {
     top: 43rem;
-    right: 30%; }
+    right: 30%;
+  }
 }
 
 // Giant text
 
 #splash {
+  @include font(50px, 55px, 90px, 100px, 130px, 145px);
   color: $turquoise;
-  line-height: 1.1;
   text-transform: uppercase;
-  margin: 0 auto;
   text-align: center;
-  padding: 20px 0; padding: 2rem 0;
-  font-size: 50px; font-size: 5rem;
-}
-@media (min-width: 400px) {
-  #splash {
-    font-size: 60px; font-size: 6rem;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  @include media(tablet) {
+    padding: 30px 0;
   }
-}
-@media (min-width: 550px) {
-  #splash {
-    padding: 30px 0; padding: 3rem 0;
-    font-size: 90px; font-size: 9rem;
-  }
-}
-@media (min-width: 768px) {
-  #splash {
-    font-size: 130px; font-size: 13rem;
-    padding: 60px 0 50px; padding: 6rem 0 5rem;
+  @include media(desktop) {
+    padding: 60px 0 50px;
   }
 }
 
@@ -111,24 +103,20 @@
   background-color: $white;
 }
 #intro {
+  @include font(20px, 30px, 24px, 35px, 30px, 45px);
   a {
     @extend .stealth-link;
   }
-  @media (min-width: 400px) {
-    font-size: 2.4rem;
-  }
-  @media (min-width: 768px) {
-    font-size: 3rem;
-  }
+}
+#contact {
+  padding: 0 0 40px 0;
 }
 
 .project {
-	padding-top: 20px; padding-top: 2rem;
-	padding-bottom: 20px; padding-top: 2rem;
+	padding: 10px 0;
 
 	h2 {
-		margin-top: 0;
-		margin-bottom: 5px; margin-bottom: 0.5rem;
+		margin: 10px 0;
 
 		.date {
 			font-size: 25px; font-size: 2.5rem;
