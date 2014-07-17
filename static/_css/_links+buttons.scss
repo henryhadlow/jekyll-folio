@@ -5,7 +5,7 @@ a {
   border-bottom: 2px solid;
   display: inline;
   text-decoration: none;
-  @include transition((color 0.1s ease-in-out, border-color 0.1s ease-in-out));
+  @include transition((color 0.1s ease-in-out, border-color 0.1s ease-in-out, background-color 0.1s ease-in-out));
   @include media(tablet) {
     border-bottom: 4px solid;
   }
@@ -22,26 +22,40 @@ a:active {
 }
 .no-link {
   border-bottom: 0;
+  &:hover {
+    border-bottom: 4px solid;
+    color: inherit;
+  }
 }
-.no-link:hover {
-  border-bottom: 4px solid; border-bottom: 0.4rem solid;
-  color: inherit;
+
+a.video, a.video img {
+  @extend .no-link;
+  :hover {
+    @extend .no-link:hover;
+  }
+}
+
+.video-play-icon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  opacity: 0.5;
 }
 
 /* --- Button styles --- */
 
 a.button {
   border: 0;
-  margin: 10px 0; margin: 1rem 0;
-  padding: 0.5rem 0.8rem;
-  @include border-radius(3px);
-  -webkit-box-shadow: 0 3px 0 lighten($black, 15%);
-  -moz-box-shadow: 0 3px 0 lighten($black, 15%);
-  box-shadow: 0 3px 0 lighten($black, 15%);
-  -moz-transition: background-color 0.1s ease-in-out;
-  -ms-transition: background-color 0.1s ease-in-out;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
+  margin: 10px 0;
+  padding: 5px 8px;
+  display: block;
+  background-color: $black;
+  color: $white;
+  // @include border-radius(3px);
+  // @include box-shadow(0 3px 0 lighten($black, 15%));
+  // @include transition(background-color 0.1s ease-in-out);
 }
 .button:active {
   top: 0px;
@@ -51,7 +65,6 @@ a.button {
 }
 .button.right {
   float: right;
-  display: block;
 }
 @media (max-width: 768px) {
   .button.right {
