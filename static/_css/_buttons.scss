@@ -1,72 +1,4 @@
 
-/* --- Button styles --- */
-
-// a.button {
-//   position: relative;
-//   border: 0;
-//   margin: 10px 0;
-//   padding: 5px 8px;
-//   display: block;
-//   background-color: $black;
-//   color: $white;
-//   @include border-radius(3px);
-//   @include box-shadow(0 3px 0 lighten($black, 15%));
-//   @include transition(background-color 0.1s ease-in-out);
-//   &:hover {
-//     background-color: #FFF;
-//     color: darken($grey, 10%)
-//   }
-// }
-// .button:active {
-//   top: 3px;
-//   @include box-shadow(none);
-// }
-
-// .button.right {
-//   clear: left;
-//   float: left;
-//   margin: 0 0 15px 0;
-//   @include media(desktop) {
-//     float: right;
-//   }
-// }
-//
-// .button.UC {
-//   font-size: 18px; font-size: 1.8rem;
-//   text-transform: uppercase;
-//   letter-spacing: 1px;
-// }
-//
-// .button.light {
-//   background-color: darken($white, 10%);
-//   color: lighten($black, 10%);
-// }
-// .button.light:hover {
-//   background-color: #FFF;
-//   color: darken($grey, 10%)
-// }
-// .button.bright {
-//   background-color: darken($white, 5%);
-//   color: $grey;
-// }
-// .button.bright:hover {
-//   background-color: #FFF;
-//   color: darken($grey, 10%)
-// }
-//
-// .button.dark {
-//   background-color: lighten($black, 30%);
-//   color: $white;
-//   letter-spacing: 1px;
-//   @include box-shadow(0 3px 0 $black);
-// }
-// .button.dark:hover {
-//   background-color: $black;
-// }
-// .button.dark:active {
-//   @include box-shadow(none);
-// }
-
 @mixin button($colour: $button-colour){
   // Colour
   background-color: $colour;
@@ -191,3 +123,72 @@
 a.button {
   @include button;
 }
+
+
+/* --- Button styles --- */
+
+// a.button {
+//   position: relative;
+//   border: 0;
+//   margin: 10px 0;
+//   padding: 5px 8px;
+//   display: block;
+//   background-color: $black;
+//   color: $white;
+//   @include border-radius(3px);
+//   @include box-shadow(0 3px 0 lighten($black, 15%));
+//   @include transition(background-color 0.1s ease-in-out);
+//   &:hover {
+//     background-color: #FFF;
+//     color: darken($grey, 10%)
+//   }
+// }
+// .button:active {
+//   top: 3px;
+//   @include box-shadow(none);
+// }
+
+// .button.right {
+//   clear: left;
+//   float: left;
+//   margin: 0 0 15px 0;
+//   @include media(desktop) {
+//     float: right;
+//   }
+// }
+//
+// .button.UC {
+//   font-size: 18px; font-size: 1.8rem;
+//   text-transform: uppercase;
+//   letter-spacing: 1px;
+// }
+//
+// .button.light {
+//   background-color: darken($white, 10%);
+//   color: lighten($black, 10%);
+// }
+// .button.light:hover {
+//   background-color: #FFF;
+//   color: darken($grey, 10%)
+// }
+// .button.bright {
+//   background-color: darken($white, 5%);
+//   color: $grey;
+// }
+// .button.bright:hover {
+//   background-color: #FFF;
+//   color: darken($grey, 10%)
+// }
+//
+// .button.dark {
+//   background-color: lighten($black, 30%);
+//   color: $white;
+//   letter-spacing: 1px;
+//   @include box-shadow(0 3px 0 $black);
+// }
+// .button.dark:hover {
+//   background-color: $black;
+// }
+// .button.dark:active {
+//   @include box-shadow(none);
+// }

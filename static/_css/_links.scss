@@ -1,3 +1,4 @@
+
 /* --- Link styles --- */
 
 a {
@@ -5,7 +6,7 @@ a {
   border-bottom: 2px solid;
   display: inline;
   text-decoration: none;
-  @include transition((color 0.1s ease-in-out, border-color 0.1s ease-in-out, background-color 0.1s ease-in-out));
+  @include transition( (color 0.1s ease-in-out, border-color 0.1s ease-in-out, background-color 0.1s ease-in-out) );
   @include media(tablet) {
     border-bottom: 4px solid;
   }

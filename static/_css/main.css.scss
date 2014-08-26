@@ -1,13 +1,14 @@
 
-@import "bootstrap/normalize";
+@import "normalise";
 @import "media-query-helpers";
-@import "mixins";
+@import "shims";
+@import "css3";
 @import "colours";
 @import "typography";
 @import "links";
 @import "buttons";
-// @import "homepage";
-// @import "default";
+@import "homepage";
+@import "default";
 // @import "print";
 
 // Generic styles
