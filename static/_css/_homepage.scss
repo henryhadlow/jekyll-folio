@@ -44,7 +44,29 @@
   		a {
   			@extend .no-link;
   		}
+
+      @include media(desktop) {
+        float: left;
+      }
   	}
+
+    a.button {
+      margin: 0 0 15px 0;
+      @include media(desktop) {
+        margin: 10px 0;
+        float: right;
+      }
+
+      &.light {
+        background-color: darken($white, 10%);
+        color: lighten($black, 10%);
+
+        &:hover {
+          background-color: #FFF;
+          color: darken($grey, 10%)
+        }
+      }
+    }
   }
 
   // Navigation
